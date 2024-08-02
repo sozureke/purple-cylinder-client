@@ -1,0 +1,16 @@
+.footer {
+	@apply relative flex items-center w-full p-10;
+
+	&::before {
+		content: '';
+		@apply absolute block w-screen h-[1px] bg-white z-[999] top-0 left-1/2 -translate-x-1/2;
+	}
+}
+
+.container {
+	@apply w-[1600px] flex flex-col flex-wrap items-center justify-center mx-auto gap-12;
+}
+
+.rights {
+	@apply max-w-[270px] text-center;
+}

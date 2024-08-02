@@ -1,0 +1,1 @@
+export { onlyText } from './string'

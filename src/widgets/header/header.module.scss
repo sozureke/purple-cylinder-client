@@ -1,0 +1,12 @@
+.header {
+	@apply w-full flex relative items-center justify-between py-3 px-2.5;
+
+	&::before {
+		content: '';
+		@apply absolute block w-screen h-[1px] bg-white z-[999] bottom-0 left-1/2 -translate-x-1/2;
+	}
+}
+
+.container {
+	@apply w-[1600px] flex flex-wrap items-center justify-between mx-auto;
+}
