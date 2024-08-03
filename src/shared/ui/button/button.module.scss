@@ -1,0 +1,8 @@
+.button {
+	@apply w-full p-3 border border-solid border-grey-color transition-colors duration-200 ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+	@apply border-white;
+}

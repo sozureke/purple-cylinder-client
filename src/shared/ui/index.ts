@@ -1,4 +1,6 @@
 export { ActionButtons } from './action-buttons/ActionButtons'
+export { Button } from './button/Button'
+export { Heading } from './heading/Heading'
 export { Icon } from './icon/Icon'
 export { Logo } from './logo/Logo'
 export { Navigation } from './navigation/Navigation'
