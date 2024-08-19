@@ -10,7 +10,7 @@ export const Heading: React.FC<IHeadingProps> = ({
 	const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements
 	return (
 		<HeadingTag
-			className={`${styles.heading} ${styles[`h${level}`]} ${className} uppercase`}
+			className={`${styles.heading} ${styles[`h${level}`]} ${className}`}
 		>
 			{children}
 		</HeadingTag>

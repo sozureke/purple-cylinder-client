@@ -1,14 +1,15 @@
-import Link from 'next/link'
-import { FC, PropsWithChildren } from 'react'
+import { forwardRef } from 'react'
 import { IButton } from './button.interface'
 import styles from './button.module.scss'
 
-export const Button: FC<PropsWithChildren<IButton>> = ({ href, children }) => {
-	return (
-		<>
-			<Link href={href} className={styles.button}>
+export const Button = forwardRef<HTMLButtonElement, IButton>(
+	({ children, ...rest }, ref) => {
+		return (
+			<button className={styles.button} {...rest} ref={ref}>
 				{children}
-			</Link>
-		</>
-	)
-}
+			</button>
+		)
+	}
+)
+
+Button.displayName = 'Button'

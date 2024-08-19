@@ -1,0 +1,20 @@
+.search_bar {
+	@apply w-full py-5 relative;
+
+	&::before {
+		content: '';
+		@apply absolute block w-screen h-[1px] bg-white z-[999] bottom-0 left-1/2 -translate-x-1/2;
+	}
+}
+
+.search_container {
+	@apply flex gap-5 w-full max-w-[1600px] cursor-pointer;
+}
+
+.search_input {
+	@apply w-full overflow-hidden;
+}
+
+.search_input::placeholder {
+	@apply text-white;
+}

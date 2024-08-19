@@ -1,0 +1,23 @@
+.auth_form {
+	@apply flex flex-col max-w-[780px] w-full p-12 border border-solid border-white gap-6;
+}
+
+.form_title {
+	@apply uppercase text-center;
+}
+
+.input_container {
+	@apply flex flex-col w-full gap-2;
+}
+
+.button_container {
+	@apply flex flex-col gap-5;
+}
+
+.toggle_button {
+	@apply cursor-pointer text-center text-grey-color transition-colors duration-200 ease-in-out;
+
+	&:hover {
+		@apply text-white;
+	}
+}

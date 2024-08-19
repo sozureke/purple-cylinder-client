@@ -8,8 +8,7 @@ export const ActionButtons: FC<IActionButtons> = ({
 	data,
 	className,
 	target
-}) => {
-	return (
+}) => {	return (
 		<>
 			<div className={`${styles.action_buttons} ${className}`}>
 				{data.map(item => (

@@ -4,7 +4,7 @@ const nextConfig = {
 	optimizeFonts: true,
 	env: {
 		NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
-		APP_ENV: process.env.REACT_APP_ENV
+		API_URL: process.env.API_URL
 	},
 	async rewrites() {
 		return [

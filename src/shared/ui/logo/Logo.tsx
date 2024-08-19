@@ -9,6 +9,7 @@ export const Logo: FC = ({}) => {
 			<Link href={'/'}>
 				<Image
 					src={siteLogo.src}
+					draggable={false}
 					alt="Purple Cylinder Logo"
 					width={115}
 					height={42}

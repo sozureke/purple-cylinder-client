@@ -1,0 +1,56 @@
+.input_container {
+	@apply w-full h-auto flex flex-col border border-transparent transition-colors duration-200 ease-in-out;
+
+	.input_value {
+		@apply text-text-14 flex flex-col px-5 py-3 border border-solid border-grey-color;
+	}
+
+	.input {
+		@apply text-white w-full border-none;
+	}
+
+	.input::placeholder {
+		@apply transition-colors text-grey-color duration-200 ease-in-out;
+	}
+
+	&:hover {
+		.input::placeholder {
+			@apply text-white;
+		}
+		.underline {
+			@apply bg-white;
+		}
+	}
+
+	&:focus-within {
+		.underline {
+			@apply bg-white;
+		}
+	}
+
+	&.has-error {
+		.input_value {
+			@apply border-red-500;
+		}
+
+		.input_label {
+			@apply text-red-500;
+		}
+
+		.error_message {
+			@apply text-red-500 visible;
+		}
+	}
+}
+
+.error {
+	@apply h-5;
+}
+
+.error_message {
+	@apply text-xs mt-1 invisible;
+}
+
+.has-error .error_message {
+	@apply visible;
+}
