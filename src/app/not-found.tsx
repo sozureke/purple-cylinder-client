@@ -1,5 +1,6 @@
 import '@/app/assets/styles/index.scss'
 import { Button, Heading } from '@/shared/ui'
+import Link from 'next/link'
 
 export default function NotFound() {
 	return (
@@ -12,7 +13,9 @@ export default function NotFound() {
 						a&nbsp;way to&nbsp;go&nbsp;back...
 					</p>
 				</div>
-				<Button href="/">back to home page</Button>
+				<Link href={'/'}>
+					<Button>back to home page</Button>
+				</Link>
 			</div>
 		</section>
 	)

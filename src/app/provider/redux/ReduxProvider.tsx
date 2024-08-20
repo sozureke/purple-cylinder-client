@@ -1,17 +1,16 @@
 import { FC } from 'react'
 import ReduxToastr from 'react-redux-toastr'
 
-export const ReduxProvider: FC = () => {
+export const ReduxToastrProvider: FC = () => {
 	return (
 		<>
 			<ReduxToastr
-				timeOut={4000}
+				timeOut={5000}
 				newestOnTop={false}
 				preventDuplicates
-				position="top-left"
+				position="bottom-center"
 				transitionIn="fadeIn"
 				transitionOut="fadeOut"
-				progressBar
 				closeOnToastrClick
 			/>
 		</>

@@ -1,12 +1,17 @@
 import { DefaultLayout } from '@/app/layout/index'
 import { store } from '@/app/store'
+import { TypeComponentAuthFields } from '@/features'
 import { FC, PropsWithChildren } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { Provider } from 'react-redux'
+import { AuthProvider } from '../auth/AuthProvider'
 import { HeadProvider } from '../head/HeadProvider'
-import { ReduxProvider } from '../redux/ReduxProvider'
+import { ReduxToastrProvider } from '../redux/ReduxProvider'
 
-export const MainProvider: FC<PropsWithChildren> = ({ children }) => {
+export const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
+	children,
+	Component
+}) => {
 	const queryClient = new QueryClient({
 		defaultOptions: {
 			queries: {
@@ -19,8 +24,10 @@ export const MainProvider: FC<PropsWithChildren> = ({ children }) => {
 			<HeadProvider>
 				<Provider store={store}>
 					<QueryClientProvider client={queryClient}>
-						<ReduxProvider />
-						<DefaultLayout>{children}</DefaultLayout>
+						<ReduxToastrProvider />
+						<AuthProvider Component={Component}>
+							<DefaultLayout>{children}</DefaultLayout>
+						</AuthProvider>
 					</QueryClientProvider>
 				</Provider>
 			</HeadProvider>

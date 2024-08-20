@@ -12,6 +12,10 @@ export const removeTokensStorage = () => {
 }
 
 export const saveToStorage = (data: IAuthResponse) => {
-	saveToStorage(data)
-	localStorage.setItem('user', JSON.stringify(data.user))
+	try {
+		saveTokensStorage(data)
+		localStorage.setItem('user', JSON.stringify(data.user))
+	} catch (error) {
+		console.error('Error saving to storage:', error)
+	}
 }

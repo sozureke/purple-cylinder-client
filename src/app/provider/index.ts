@@ -1,2 +1,3 @@
+export { AuthProvider } from './auth/AuthProvider'
 export { MainProvider } from './main/MainProvider'
-export { ReduxProvider } from './redux/ReduxProvider'
+export { ReduxToastrProvider } from './redux/ReduxProvider'

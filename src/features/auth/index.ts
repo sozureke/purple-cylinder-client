@@ -1,1 +1,6 @@
+export * from './lib/auth-form.interface'
+export * from './lib/auth-roles.interface'
+export * from './model/useAuth'
+export * from './model/useAuthForm'
+export * from './model/useAuthRedirect'
 export { AuthForm } from './ui/AuthForm'

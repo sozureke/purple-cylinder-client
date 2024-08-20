@@ -11,6 +11,7 @@ export const Logo: FC = ({}) => {
 					src={siteLogo.src}
 					draggable={false}
 					alt="Purple Cylinder Logo"
+					priority
 					width={115}
 					height={42}
 				/>

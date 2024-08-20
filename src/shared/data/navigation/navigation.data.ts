@@ -37,7 +37,7 @@ export const headerActionButtons = [
 		icon: MdSearch
 	},
 	{
-		href: '/account',
+		href: '/profile',
 		alternativeText: 'account icon',
 		icon: MdOutlinePerson
 	},

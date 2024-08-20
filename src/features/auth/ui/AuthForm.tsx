@@ -46,12 +46,14 @@ export const AuthForm: FC = () => {
 					<Input
 						type="email"
 						placeholder="email"
+						autoComplete="email"
 						inputErrorMessage={errors.email?.message}
 						{...register('email', authFormConfig.validation.email)}
 					/>
 					<Input
 						type="password"
 						placeholder="password"
+						autoComplete="current-password"
 						inputErrorMessage={errors.password?.message}
 						{...register('password', authFormConfig.validation.password)}
 					/>

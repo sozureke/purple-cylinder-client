@@ -12,7 +12,7 @@ export const AuthService = {
 		surname: string
 	) {
 		const response = await axiosClassic.post<IAuthResponse>(
-			getAuthUrl('/register'),
+			getAuthUrl('register'),
 			{ email, password, name, surname }
 		)
 
@@ -25,7 +25,7 @@ export const AuthService = {
 
 	async login(email: string, password: string) {
 		const response = await axiosClassic.post<IAuthResponse>(
-			getAuthUrl('/login'),
+			getAuthUrl('login'),
 			{ email, password }
 		)
 
@@ -44,7 +44,7 @@ export const AuthService = {
 	async getNewRefreshToken() {
 		const refreshToken = Cookies.get('alpha_key')
 		const response = await axiosClassic.post<IAuthResponse>(
-			getAuthUrl('/login/access-token'),
+			getAuthUrl('login/access-token'),
 			{ refreshToken },
 			{ headers: getContentType() }
 		)
