@@ -7,7 +7,7 @@
 	}
 }
 
-.search_container {
+.search {
 	@apply flex gap-5 w-full max-w-[1600px] cursor-pointer;
 }
 
@@ -17,4 +17,28 @@
 
 .search_input::placeholder {
 	@apply text-white;
+}
+
+.search_list {
+	@apply absolute top-full left-0 right-0 bg-white  z-10 mt-1 max-h-72 overflow-y-auto;
+}
+
+.product_image {
+	@apply w-full h-auto;
+}
+
+.product_information {
+	@apply p-2 text-sm;
+}
+
+.not_found {
+	@apply p-4 text-center text-grey-color;
+}
+
+.overlay {
+	@apply fixed inset-0 bg-dark-color bg-opacity-50 z-[5] hidden;
+}
+
+.search_bar:focus-within ~ .overlay {
+	display: block;
 }

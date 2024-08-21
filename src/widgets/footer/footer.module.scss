@@ -1,5 +1,5 @@
 .footer {
-	@apply relative flex items-center w-full p-10;
+	@apply relative flex items-center w-full p-10 mt-[200px];
 
 	&::before {
 		content: '';

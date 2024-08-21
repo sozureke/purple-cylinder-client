@@ -1,2 +1,2 @@
-export { useSearchBar } from './model/useSearchBar'
 export { SearchBar } from './ui/SearchBar'
+export { SearchList } from './ui/SearchList'

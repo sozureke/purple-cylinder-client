@@ -1,22 +1,28 @@
-import { FC } from 'react'
-import { IoSearchSharp } from 'react-icons/io5'
+import { useSearch } from '@/features'
+import { FC, useState } from 'react'
 import styles from './search-bar.module.scss'
+import { SearchField } from './SearchField'
+import { SearchList } from './SearchList'
 
 export const SearchBar: FC = () => {
+	const { isSuccess, data, searchTerm, handleSearch } = useSearch()
+	const [isFocused, setIsFocused] = useState(false)
+
+	const handleFocus = () => setIsFocused(true)
+	const handleBlur = () => setIsFocused(false)
+
 	return (
 		<>
-			<form className={styles.search_bar} role="search">
-				<div className={styles.search_container}>
-					<button type="submit">
-						<IoSearchSharp size={20} />
-					</button>
-					<input
-						type="text"
-						className={styles.search_input}
-						placeholder="What are you looking for ?"
-					/>
-				</div>
-			</form>
+			{isFocused && <div className={styles.overlay} onClick={handleBlur} />}
+			<div className={styles.search_bar}>
+				<SearchField
+					handleSearch={handleSearch}
+					searchTerm={searchTerm}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
+				/>
+				{isSuccess && <SearchList products={data || []} />}
+			</div>
 		</>
 	)
 }
