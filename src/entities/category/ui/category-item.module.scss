@@ -1,0 +1,30 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.category_item {
+	@apply flex items-center justify-between px-6 py-3 max-w-[680px] w-full border border-solid border-grey-color;
+	animation: fadeIn 0.5s ease-in-out forwards;
+
+	&:hover {
+		@apply border-white;
+
+		.category,
+		.category_arrow {
+			@apply text-white rotate-0;
+		}
+	}
+}
+
+.category {
+	@apply text-text-26 uppercase text-grey-color;
+}
+
+.category_arrow {
+	@apply text-grey-color -rotate-45 transition-transform duration-200 ease-in-out;
+}

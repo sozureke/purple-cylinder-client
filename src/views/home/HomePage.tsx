@@ -1,5 +1,5 @@
 import { Meta } from '@/app/meta'
-import { SearchBar } from '@/widgets'
+import { CategoriesContainer, SearchBar } from '@/widgets'
 import { ProductContainer } from '@/widgets/product-container'
 import { FC } from 'react'
 
@@ -8,6 +8,7 @@ export const HomePage: FC = ({}) => {
 		<>
 			<Meta title="Home" description="Home Page">
 				<SearchBar />
+				<CategoriesContainer />
 				<ProductContainer category="66101e4bf4374592d5a3ddfc" />
 			</Meta>
 		</>

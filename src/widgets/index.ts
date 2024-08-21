@@ -1,3 +1,5 @@
+export * from './categories-container'
 export { Footer } from './footer/Footer'
 export { Header } from './header/Header'
+export * from './product-container'
 export * from './search-bar'

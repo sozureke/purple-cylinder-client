@@ -1,5 +1,4 @@
-import { ProductCard } from '@/entities/product'
-import { ProductService } from '@/shared/services'
+import { ProductCard, ProductService } from '@/entities/product'
 import { FC } from 'react'
 import { useQuery } from 'react-query'
 import { IProductContainer } from '../model/product-container.interface'

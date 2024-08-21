@@ -1,11 +1,11 @@
-import { ProductService } from '@/shared/services'
+import { ProductService } from '@/entities/product'
 import { ChangeEvent, useState } from 'react'
 import { useQuery } from 'react-query'
 import { useDebounce } from './useDebounce'
 
 export const useSearch = () => {
 	const [searchTerm, setSearchTerm] = useState('')
-	const debouncedSearch = useDebounce(searchTerm, 500)
+	const debouncedSearch = useDebounce(searchTerm, 600)
 	const { isSuccess, data } = useQuery(
 		['search product', debouncedSearch],
 		() => {
