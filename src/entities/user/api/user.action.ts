@@ -1,9 +1,9 @@
 import { errorCatch } from '@/app/interceptors'
 import { AuthService } from '@/shared/services'
-import { toastrError } from '@/shared/utils'
+import { toastError } from '@/shared/utils'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { AxiosError } from 'axios'
-import { toastr } from 'react-redux-toastr'
+import { toast } from 'sonner'
 import { IAuthResponse, IFormData } from '../model/user.interface'
 
 export const registration = createAsyncThunk<IAuthResponse, IFormData>(
@@ -16,9 +16,10 @@ export const registration = createAsyncThunk<IAuthResponse, IFormData>(
 				surname,
 				name
 			)
+			toast.success('You have successfully registered')
 			return response.data
 		} catch (error) {
-			toastrError(error)
+			toastError(error)
 			let errorMessage = 'An unknown error occurred'
 			let status = null
 
@@ -37,10 +38,10 @@ export const login = createAsyncThunk<IAuthResponse, IFormData>(
 	async ({ email, password }, thunkApi) => {
 		try {
 			const response = await AuthService.login(email, password)
-			toastr.success('Login Successfully', 'Authorization success')
+			toast.success('Login Successfully')
 			return response.data
 		} catch (error) {
-			toastrError(error)
+			toastError(error)
 			let errorMessage = 'An unknown error occurred'
 			let status = null
 
@@ -55,7 +56,7 @@ export const login = createAsyncThunk<IAuthResponse, IFormData>(
 
 export const logout = createAsyncThunk('authorization/logout', async () => {
 	await AuthService.logout()
-	toastr.info('Logout', 'You have successfully logged out of your account')
+	toast.info('You have successfully logged out of your account')
 })
 
 export const checkAuth = createAsyncThunk<IAuthResponse>(
@@ -66,7 +67,7 @@ export const checkAuth = createAsyncThunk<IAuthResponse>(
 			return response.data
 		} catch (error) {
 			if (errorCatch(error) === 'jwt expired') {
-				toastr.error('Logout', 'Your session has ended. Re-authorise again')
+				toast.error('Your session has ended. Re-authorise again')
 				thunkApi.dispatch(logout())
 			}
 			return thunkApi.rejectWithValue(error)

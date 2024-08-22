@@ -10,7 +10,12 @@ export const RouteItem: FC<PropsWithChildren<IRouteItem>> = ({
 }) => {
 	return (
 		<>
-			<Link href={href} className={styles.nav_item} target={target}>
+			<Link
+				href={href}
+				className={styles.nav_item}
+				target={target}
+				scroll={false}
+			>
 				{children}
 			</Link>
 		</>

@@ -10,4 +10,5 @@ export interface IActionButtons {
 	data: IButtonData[]
 	className?: string
 	target?: '_blank' | '_parent'
+	onSearchClick?: () => void
 }

@@ -15,13 +15,15 @@ export const SearchBar: FC = () => {
 		<>
 			{isFocused && <div className={styles.overlay} onClick={handleBlur} />}
 			<div className={styles.search_bar}>
-				<SearchField
-					handleSearch={handleSearch}
-					searchTerm={searchTerm}
-					onFocus={handleFocus}
-					onBlur={handleBlur}
-				/>
-				{isSuccess && <SearchList products={data || []} />}
+				<div className={styles.container}>
+					<SearchField
+						handleSearch={handleSearch}
+						searchTerm={searchTerm}
+						onFocus={handleFocus}
+						onBlur={handleBlur}
+					/>
+					{isSuccess && <SearchList products={data || []} />}
+				</div>
 			</div>
 		</>
 	)

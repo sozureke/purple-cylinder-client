@@ -3,5 +3,10 @@ html {
 }
 
 section {
-	@apply my-[200px];
+	@apply py-[200px] relative;
+}
+
+section:not(:first-child)::after {
+	content: '';
+	@apply absolute block w-screen h-[1px] bg-white z-[999] top-0 left-1/2 -translate-x-1/2;
 }

@@ -1,3 +1,7 @@
 .action_buttons {
 	@apply flex flex-wrap gap-12;
 }
+
+.search {
+	@apply cursor-pointer;
+}

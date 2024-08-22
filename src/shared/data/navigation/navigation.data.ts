@@ -1,8 +1,4 @@
-import {
-	MdOutlinePerson,
-	MdOutlineShoppingCart,
-	MdSearch
-} from 'react-icons/md'
+import { MdOutlinePerson, MdOutlineShoppingCart } from 'react-icons/md'
 
 import {
 	BiLogoFacebook,
@@ -13,11 +9,11 @@ import {
 
 export const headerNavigation = [
 	{
-		href: '/collections/summer-24',
+		href: '/categories/summer-24',
 		title: 'summer 24'
 	},
 	{
-		href: '/collections/entrste',
+		href: '/categories/entrste',
 		title: 'entrste'
 	},
 	{
@@ -31,11 +27,6 @@ export const headerNavigation = [
 ]
 
 export const headerActionButtons = [
-	{
-		href: '/search',
-		alternativeText: 'search icon',
-		icon: MdSearch
-	},
 	{
 		href: '/profile',
 		alternativeText: 'account icon',

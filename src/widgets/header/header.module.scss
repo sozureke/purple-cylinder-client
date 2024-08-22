@@ -1,5 +1,9 @@
+.header_container {
+	@apply sticky top-0 z-[1000];
+}
+
 .header {
-	@apply w-full flex relative items-center justify-between py-3 px-2.5;
+	@apply w-full flex items-center relative justify-between bg-dark-color py-3 px-2.5;
 
 	&::before {
 		content: '';
@@ -7,6 +11,10 @@
 	}
 }
 
+.search_bar_container {
+	@apply h-[60px] bg-dark-color;
+}
+
 .container {
-	@apply w-[1600px] flex flex-wrap items-center justify-between mx-auto gap-14;
+	@apply max-w-[1600px] w-full flex flex-wrap items-center justify-between mx-auto gap-14 bg-dark-color;
 }

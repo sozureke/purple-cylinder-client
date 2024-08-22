@@ -1,10 +1,14 @@
 .search_bar {
-	@apply w-full py-5 relative;
+	@apply py-5 relative w-full flex items-center justify-center;
 
 	&::before {
 		content: '';
 		@apply absolute block w-screen h-[1px] bg-white z-[999] bottom-0 left-1/2 -translate-x-1/2;
 	}
+}
+
+.container {
+	@apply max-w-[1600px] w-full;
 }
 
 .search {
@@ -20,7 +24,7 @@
 }
 
 .search_list {
-	@apply absolute top-full left-0 right-0 bg-white  z-10 mt-1 max-h-72 overflow-y-auto;
+	@apply absolute top-full left-0 right-0 bg-dark-color z-[700] mt-1 max-h-72 overflow-y-auto;
 }
 
 .product_image {

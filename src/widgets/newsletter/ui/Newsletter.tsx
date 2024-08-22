@@ -9,7 +9,7 @@ export const Newsletter: FC = () => {
 			<section className={styles.newsletter}>
 				<TextBlock
 					title="Newsletter"
-					body="Explore the newest fashion trends, enhance your wardrobe with curated clothing and accessories."
+					body="Stay ahead of&nbsp;the curve with the latest fashion updates. Discover handpicked styles and exclusive accessories to&nbsp;elevate your wardrobe."
 				/>
 				<NewsletterForm />
 			</section>

@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { Provider } from 'react-redux'
 import { AuthProvider } from '../auth/AuthProvider'
 import { HeadProvider } from '../head/HeadProvider'
-import { ReduxToastrProvider } from '../redux/ReduxProvider'
+import { SonnerProvider } from '../sonner/SonnerProvider'
 
 export const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 	children,
@@ -24,9 +24,9 @@ export const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 			<HeadProvider>
 				<Provider store={store}>
 					<QueryClientProvider client={queryClient}>
-						<ReduxToastrProvider />
 						<AuthProvider Component={Component}>
 							<DefaultLayout>{children}</DefaultLayout>
+							<SonnerProvider />
 						</AuthProvider>
 					</QueryClientProvider>
 				</Provider>

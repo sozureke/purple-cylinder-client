@@ -1,7 +1,7 @@
 import { newsletterFormConfig } from '@/shared/config'
-import { toastrError } from '@/shared/utils'
+import { toastError } from '@/shared/utils'
 import { useForm } from 'react-hook-form'
-import { toastr } from 'react-redux-toastr'
+import { toast } from 'sonner'
 import { INewsletterForm } from '../model/newsletter.interface'
 import { useNewsletter } from './useNewsletter'
 
@@ -18,9 +18,9 @@ export const useNewsletterForm = () => {
 		mutate(data.email, {
 			onSuccess: () => {
 				reset()
-				toastr.success('Success', 'You have been subscribed to our newsletter')
+				toast.success('You have been subscribed to our newsletter')
 			},
-			onError: (error: any) => toastrError(error)
+			onError: (error: any) => toastError(error)
 		})
 	}
 

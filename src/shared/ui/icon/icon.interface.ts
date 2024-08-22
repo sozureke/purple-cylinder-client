@@ -4,4 +4,5 @@ export interface IIcon {
 	icon: IconType
 	alternativeText: string
 	size?: number
+	onClick?: () => void
 }
