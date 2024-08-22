@@ -1,0 +1,15 @@
+.newsletter {
+	@apply flex flex-col items-center gap-14;
+}
+
+.newsletter_form {
+	@apply flex flex-col gap-3 max-w-[580px] w-full;
+
+	.newsletter_input {
+		@apply h-[32px];
+	}
+
+	.input_button {
+		@apply text-left h-[55px];
+	}
+}

@@ -1,0 +1,7 @@
+.text_block {
+	@apply flex flex-col items-center text-center max-w-[580px] w-full;
+}
+
+.text {
+	@apply text-text-16;
+}

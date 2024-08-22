@@ -6,3 +6,11 @@
 .button:focus {
 	@apply border-white;
 }
+
+.button:disabled {
+	@apply text-grey-color;
+
+	&:hover {
+		@apply border-grey-color;
+	}
+}

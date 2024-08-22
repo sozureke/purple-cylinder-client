@@ -1,3 +1,7 @@
 html {
 	@apply bg-dark-color text-white text-text-14 font-text scroll-smooth leading-130;
 }
+
+section {
+	@apply my-[200px];
+}

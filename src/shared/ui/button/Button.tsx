@@ -3,9 +3,9 @@ import { IButton } from './button.interface'
 import styles from './button.module.scss'
 
 export const Button = forwardRef<HTMLButtonElement, IButton>(
-	({ children, ...rest }, ref) => {
+	({ children, className, ...rest }, ref) => {
 		return (
-			<button className={styles.button} {...rest} ref={ref}>
+			<button className={`${styles.button} ${className}`} {...rest} ref={ref}>
 				{children}
 			</button>
 		)

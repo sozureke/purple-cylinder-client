@@ -17,7 +17,7 @@ export const ProductContainer: FC<IProductContainer> = ({ category }) => {
 		<div>Loading...</div>
 	) : (
 		<>
-			<div className={styles.product_container}>
+			<section className={styles.product_container}>
 				{productsList?.data.map(product => (
 					<ProductCard
 						key={product.slug}
@@ -28,7 +28,7 @@ export const ProductContainer: FC<IProductContainer> = ({ category }) => {
 						description={product.description}
 					/>
 				))}
-			</div>
+			</section>
 		</>
 	)
 }
