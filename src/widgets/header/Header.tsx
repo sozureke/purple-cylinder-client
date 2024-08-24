@@ -6,7 +6,7 @@ import { SearchBar } from '../search-bar'
 import styles from './header.module.scss'
 
 export const Header: FC = ({}) => {
-	const [isSearchOpen, setIsSearchOpen] = useState(false)
+	const [isSearchOpen, setIsSearchOpen] = useState(true)
 
 	const toggleSearchBar = () => {
 		setIsSearchOpen(!isSearchOpen)

@@ -17,11 +17,11 @@ export const headerNavigation = [
 		title: 'entrste'
 	},
 	{
-		href: '/women',
+		href: '/categories/women',
 		title: 'women'
 	},
 	{
-		href: '/men',
+		href: '/categories/men',
 		title: 'men'
 	}
 ]

@@ -13,14 +13,26 @@
 
 .search {
 	@apply flex gap-5 w-full max-w-[1600px] cursor-pointer;
+
+	&:hover .icon {
+		@apply text-white;
+	}
+}
+
+.icon {
+	@apply text-grey-color transition-colors duration-200 ease-in-out;
 }
 
 .search_input {
 	@apply w-full overflow-hidden;
-}
 
-.search_input::placeholder {
-	@apply text-white;
+	&::placeholder {
+		@apply text-grey-color transition-colors duration-200 ease-in-out;
+	}
+
+	&:hover::placeholder {
+		@apply text-white;
+	}
 }
 
 .search_list {

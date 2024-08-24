@@ -3,10 +3,14 @@ html {
 }
 
 section {
-	@apply py-[200px] relative;
+	@apply relative;
+
+	&:not(:first-of-type)::after {
+		content: '';
+		@apply absolute block w-screen h-[1px] bg-white z-[999] top-0 left-1/2 -translate-x-1/2;
+	}
 }
 
-section:not(:first-child)::after {
-	content: '';
-	@apply absolute block w-screen h-[1px] bg-white z-[999] top-0 left-1/2 -translate-x-1/2;
+.wrapper {
+	@apply py-[200px];
 }

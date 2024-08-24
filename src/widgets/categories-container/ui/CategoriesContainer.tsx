@@ -8,7 +8,7 @@ export const CategoriesContainer: FC = () => {
 
 	return (
 		<>
-			<section className={styles.categories_container}>
+			<section className={`${styles.categories_container} wrapper`}>
 				{isLoading ? (
 					<div>Loading...</div>
 				) : (

@@ -8,7 +8,7 @@ export const HomePage: FC = ({}) => {
 		<>
 			<Meta title="Home" description="Home Page">
 				<CategoriesContainer />
-				<ProductContainer category="66101e4bf4374592d5a3ddfc" />
+				<ProductContainer category="Entrste" />
 				<Newsletter />
 			</Meta>
 		</>

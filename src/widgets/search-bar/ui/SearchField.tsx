@@ -12,7 +12,12 @@ export const SearchField: FC<ISearchField> = ({
 }) => {
 	return (
 		<div className={styles.search}>
-			<Icon icon={MdOutlineSearch} alternativeText="search icon" size={22} />
+			<Icon
+				icon={MdOutlineSearch}
+				alternativeText="search icon"
+				size={22}
+				className={styles.icon}
+			/>
 			<input
 				placeholder="What are you looking for?"
 				className={styles.search_input}

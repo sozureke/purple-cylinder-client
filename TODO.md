@@ -1,4 +1,4 @@
-[] - компонент поиска
-[] - компонент секции каталога и дочерних компонентов
 [] - lazy loading
 [] - user.actions убрать исключение
+[] - skeleton loader
+[] - get by category name

@@ -1,3 +1,4 @@
+import { SonnerProvider } from '@/app/provider'
 import { Footer, Header } from '@/widgets'
 import { FC, PropsWithChildren } from 'react'
 import styles from './default.module.scss'
@@ -7,6 +8,7 @@ export const DefaultLayout: FC<PropsWithChildren> = ({ children }) => {
 		<>
 			<Header />
 			<main className={styles.container}>{children}</main>
+			<SonnerProvider />
 			<Footer />
 		</>
 	)

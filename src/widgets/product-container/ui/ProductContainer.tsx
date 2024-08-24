@@ -1,24 +1,19 @@
-import { ProductCard, ProductService } from '@/entities/product'
+import { ProductCard } from '@/entities/product'
+import { useProductByCategory } from '@/shared/hooks'
+import { Message } from '@/shared/ui'
 import { FC } from 'react'
-import { useQuery } from 'react-query'
 import { IProductContainer } from '../model/product-container.interface'
 import styles from './product-container.module.scss'
 
 export const ProductContainer: FC<IProductContainer> = ({ category }) => {
-	const { isLoading, data: productsList } = useQuery(
-		'products by category',
-		() => ProductService.getProductsByCategory(category),
-		{
-			enabled: !!category
-		}
-	)
+	const { isLoading, productsList } = useProductByCategory(category)
 
-	return isLoading ? (
-		<div>Loading...</div>
-	) : (
-		<>
-			<section className={styles.product_container}>
-				{productsList?.data.map(product => (
+	return (
+		<section className={`${styles.product_container} wrapper`}>
+			{isLoading ? (
+				<Message message="Loading..." />
+			) : productsList && productsList.data.length > 0 ? (
+				productsList.data.map(product => (
 					<ProductCard
 						key={product.slug}
 						name={product.name}
@@ -27,8 +22,10 @@ export const ProductContainer: FC<IProductContainer> = ({ category }) => {
 						parameters={product.parameters}
 						description={product.description}
 					/>
-				))}
-			</section>
-		</>
+				))
+			) : (
+				<Message message="Products not found" />
+			)}
+		</section>
 	)
 }

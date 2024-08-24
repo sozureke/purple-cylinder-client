@@ -4,7 +4,7 @@ import { Toaster } from 'sonner'
 export const SonnerProvider: FC = () => {
 	return (
 		<>
-			<Toaster position="bottom-center" theme="dark" />
+			<Toaster visibleToasts={1} expand position="bottom-center" theme="dark" />
 		</>
 	)
 }

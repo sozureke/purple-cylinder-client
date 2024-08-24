@@ -5,4 +5,5 @@ export interface IIcon {
 	alternativeText: string
 	size?: number
 	onClick?: () => void
+	className?: string
 }
